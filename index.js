@@ -216,14 +216,10 @@ app.listen(port, () => {
 });
 
 
-const axios_i = require("axios");
-// Self-ping every 5 minutes
+const axios = require("axios");
+
 setInterval(() => {
-    axios_1.default.get(`https://bafmh.onrender.com/`)
-        .then(() => {
-        console.log('Self-ping successful');
-    })
-        .catch(err => {
-        console.error('Self-ping failed:', err.message);
-    });
-}, 3 * 60 * 1000); // 3 minutes in milliseconds
+    axios.get('https://bafmh.onrender.com/')
+        .then(() => console.log('Self-ping successful'))
+        .catch(err => console.error('Self-ping failed:', err.message));
+}, 3 * 60 * 1000);
