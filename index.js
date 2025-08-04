@@ -214,3 +214,16 @@ app.get('*', (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+
+const axios_1 = __importDefault(require("axios")); // Add this import at the top if not already present
+// Self-ping every 5 minutes
+setInterval(() => {
+    axios_1.default.get(`https://amardokancsrt345325423fdwset34643yhgf547.onrender.com/whoami`)
+        .then(() => {
+        console.log('Self-ping successful');
+    })
+        .catch(err => {
+        console.error('Self-ping failed:', err.message);
+    });
+}, 3 * 60 * 1000); // 3 minutes in milliseconds
