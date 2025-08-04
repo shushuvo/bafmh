@@ -219,7 +219,7 @@ app.listen(port, () => {
 const axios_1 = __importDefault(require("axios")); // Add this import at the top if not already present
 // Self-ping every 5 minutes
 setInterval(() => {
-    axios_1.default.get(`https://amardokancsrt345325423fdwset34643yhgf547.onrender.com/whoami`)
+    axios_1.default.get(`https://bafmh.onrender.com/`)
         .then(() => {
         console.log('Self-ping successful');
     })
