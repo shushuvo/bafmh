@@ -216,7 +216,7 @@ app.listen(port, () => {
 });
 
 
-const axios = require("axios");
+const axios_i = require("axios");
 // Self-ping every 5 minutes
 setInterval(() => {
     axios_1.default.get(`https://bafmh.onrender.com/`)
